@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <h1>Weather App</h1>
+
+            <div class="tab-container">
+                <p class="tab" data-userWeather>Your Weather</p>
+                <p class="tab" data-searchWeather>Search Weather</p>
+            </div>
+            <div class="weather-container">
+                <!-- grant-location container -->
+                <div class="grant-location active">
+                    <img src="./images/location.png" width="80" height="80" loading="lazy">
+                    <p>Grant Location Access</p>
+                    <p>Allow Access to get Weather Information</p>
+                    <button class="btn" data-grantAccess>Grant Access</button>
+                </div>
+
+                <!-- search-form -->
+                <form class="from-container" data-searcForm>
+                    <input placeholder="Search for City..." data-searchInput>
+                    <button class="btn" type="submit">
+                        <img src="images/search.png" width="20" height="20" loading="lazy"></button>
+                </form>
+
+                <!-- loading-screen container -->
+                <div class="loading-container">
+                    <img src="images/loading.gif" width="150" height="150" loading="lazy">
+                    <p>Loading...</p>
+                </div>
+
+                <!-- weather not found -->
+                <div class="error" error-found="true">
+                    <img src="images/not-found.png" width="250">
+                </div>
+                
+
+                <!-- show waether info-->
+                <div class="user-info-container">
+
+                    <div class="name centring">
+                        <p class="data-cityName"></p>
+                        <img data-countryFlag>
+                    </div>
+
+                    <!-- <p class="data-weatherDesc centring"></p>
+
+                    <div class="weatherIcon-img">
+                        <img class="centring" data-weatherIcon>
+                    </div> -->
+
+                    <p class="centring" data-temp>2</p>
+
+                    <div class="paremeter-container">
+
+                        <!-- card 6 -->
+                        <div class="paremeter">
+                            <img class="centring" data-weatherIcon>
+                            <p class="data-weatherDesc centring"></p>
+                            <p></p>
+                        </div>
+
+                        <!-- card 1 -->
+                        <div class="paremeter">
+                            <img src="images/wind.png" width="40" height="40" loading="lazy">
+                            <p>WINDSPEED</p>
+                            <P data-windSpeed></P>
+                        </div>
+                        <!-- card 2 -->
+                        <div class="paremeter">
+                            <img src="images/humidity.png" width="40" height="40" loading="lazy">
+                            <p>Humidity</p>
+                            <P data-humidity></P>
+                        </div>
+
+                        <!-- card 3 -->
+                        <div class="paremeter">
+                            <img src="images/cloud.png" width="40" height="40" loading="lazy">
+                            <p>Clouds</p>
+                            <P data-cloudiness></P>
+                        </div>
+
+                        <!-- card 4 -->
+                        <div class="paremeter">
+                            <img src="images/eye.png" width="40" height="40" loading="lazy">
+                            <p>Visibility</p>
+                            <P data-Visibility></P>
+                        </div>
+
+                        <!-- card 5 -->
+                        <div class="paremeter">
+                            <img src="images/air (1).png" width="40" height="40" loading="lazy">
+                            <p>Air Pressure</p>
+                            <P data-airPressure></P>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
